@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.lunchtray.ui
+package com.example.lunchtray.ui.screens
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -25,14 +25,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.lunchtray.R
 import com.example.lunchtray.datasource.DataSource
 import com.example.lunchtray.model.MenuItem
-import com.example.lunchtray.model.MenuItem.SideDishItem
+import com.example.lunchtray.model.MenuItem.EntreeItem
 
 @Composable
-fun SideDishMenuScreen(
-    options: List<SideDishItem>,
+fun EntreeMenuScreen(
+    options: List<EntreeItem>,
     onCancelButtonClicked: () -> Unit,
     onNextButtonClicked: () -> Unit,
-    onSelectionChanged: (SideDishItem) -> Unit,
+    onSelectionChanged: (EntreeItem) -> Unit,
     modifier: Modifier = Modifier
 ) {
     BaseMenuScreen(
@@ -46,11 +46,11 @@ fun SideDishMenuScreen(
 
 @Preview
 @Composable
-fun SideDishMenuPreview(){
-    SideDishMenuScreen(
-        options = DataSource.sideDishMenuItems,
-        onNextButtonClicked = {},
+fun EntreeMenuPreview(){
+    EntreeMenuScreen(
+        options = DataSource.entreeMenuItems,
         onCancelButtonClicked = {},
+        onNextButtonClicked = {},
         onSelectionChanged = {},
         modifier = Modifier
             .padding(dimensionResource(R.dimen.padding_medium))

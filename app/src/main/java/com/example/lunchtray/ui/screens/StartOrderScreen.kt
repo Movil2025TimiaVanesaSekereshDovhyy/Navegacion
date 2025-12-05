@@ -13,47 +13,50 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.lunchtray.ui
+package com.example.lunchtray.ui.screens
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.lunchtray.R
-import com.example.lunchtray.datasource.DataSource
-import com.example.lunchtray.model.MenuItem
-import com.example.lunchtray.model.MenuItem.EntreeItem
 
 @Composable
-fun EntreeMenuScreen(
-    options: List<EntreeItem>,
-    onCancelButtonClicked: () -> Unit,
-    onNextButtonClicked: () -> Unit,
-    onSelectionChanged: (EntreeItem) -> Unit,
+fun StartOrderScreen(
+    onStartOrderButtonClicked: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    BaseMenuScreen(
-        options = options,
-        onCancelButtonClicked = onCancelButtonClicked,
-        onNextButtonClicked = onNextButtonClicked,
-        onSelectionChanged = onSelectionChanged as (MenuItem) -> Unit,
-        modifier = modifier
-    )
+    Column(
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Button(
+            onClick = onStartOrderButtonClicked,
+            Modifier.widthIn(min = 250.dp)
+        ) {
+            Text(stringResource(R.string.start_order))
+        }
+    }
 }
 
 @Preview
 @Composable
-fun EntreeMenuPreview(){
-    EntreeMenuScreen(
-        options = DataSource.entreeMenuItems,
-        onCancelButtonClicked = {},
-        onNextButtonClicked = {},
-        onSelectionChanged = {},
+fun StartOrderPreview(){
+    StartOrderScreen(
+        onStartOrderButtonClicked = {},
         modifier = Modifier
             .padding(dimensionResource(R.dimen.padding_medium))
-            .verticalScroll(rememberScrollState())
+            .fillMaxSize()
     )
 }

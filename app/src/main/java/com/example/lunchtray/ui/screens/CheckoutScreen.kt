@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.lunchtray.ui
+package com.example.lunchtray.ui.screens
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
@@ -38,6 +38,7 @@ import com.example.lunchtray.R
 import com.example.lunchtray.datasource.DataSource
 import com.example.lunchtray.model.MenuItem
 import com.example.lunchtray.model.OrderUiState
+import com.example.lunchtray.ui.formatPrice
 
 @Composable
 fun CheckoutScreen(

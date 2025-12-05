@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.lunchtray.ui
+package com.example.lunchtray.ui.screens
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
