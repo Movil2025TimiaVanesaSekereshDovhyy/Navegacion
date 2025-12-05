@@ -35,7 +35,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.lunchtray.R
-import com.example.lunchtray.datasource.DataSource
+import com.example.lunchtray.data.DataSource
 import com.example.lunchtray.model.MenuItem
 import com.example.lunchtray.model.OrderUiState
 import com.example.lunchtray.ui.formatPrice

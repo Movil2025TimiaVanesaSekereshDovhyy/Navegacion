@@ -23,7 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.lunchtray.R
-import com.example.lunchtray.datasource.DataSource
+import com.example.lunchtray.data.DataSource
 import com.example.lunchtray.model.MenuItem
 import com.example.lunchtray.model.MenuItem.EntreeItem
 
