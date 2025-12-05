@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -65,7 +66,8 @@ fun LunchTrayBar(
     navigateUp: () -> Unit,
     modifier: Modifier = Modifier
 ){
-    TopAppBar(
+    //Para que se ponga en el centro
+    CenterAlignedTopAppBar(
         title = { Text(stringResource(currentScreen.title)) },
         modifier = modifier,
         navigationIcon = {
@@ -80,7 +82,6 @@ fun LunchTrayBar(
         }
     )
 }
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LunchTrayApp(
     viewModel: OrderViewModel = viewModel(),
