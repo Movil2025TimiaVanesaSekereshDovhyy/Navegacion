@@ -30,7 +30,7 @@ enum class LunchTrayScreen(@StringRes val title: Int){
     Principal( title = R.string.choose_entree),
     Guarnicion( title = R.string.choose_side_dish),
     Acompanya( title = R.string.choose_accompaniment),
-    Confirm( title = R.string.order_summary)
+    Confirm( title = R.string.order_checkout)
 
 }
 // TODO: AppBar
